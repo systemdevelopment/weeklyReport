@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="main" ng-controller="AppController">
+<head>
+    <meta charset="UTF-8">
+
+    <title ng-cloak>週報システム | {{title}}</title>
+	
+    <!--  共通のヘッダ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="vendors/angular.js"></script>
+    <script type="text/javascript" src="vendors/angular-route.js"></script>
+
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="js/services/LocalStorageItems.js"></script>
+
+    <script type="text/javascript" src="js/controllers/LoginController.js"></script>
+    <script type="text/javascript" src="js/controllers/testController.js"></script>
+    <script type="text/javascript" src="js/controllers/testController2.js"></script>
+    <script type="text/javascript" src="js/controllers/testController3.js"></script>
+    <script type="text/javascript" src="js/controllers/AppController.js"></script>
+    <script type="text/javascript" src="js/controllers/ListController.js"></script>
+    <script type="text/javascript" src="js/controllers/AddController.js"></script>
+    <script type="text/javascript" src="js/controllers/ItemController.js"></script>
+	
+    <style>
+        .main {
+            margin: 1em;
+        }
+    </style>
+    <script>
+		$(document).on('click','.navbar-collapse.in',function(e) {
+		    if( $(e.target).is('a') ) {
+		        $(this).collapse('hide');
+		    }
+		});
+	</script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+		        <span class="navbar-brand" style="font-size: 2em">週報システム</span>
+		        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuItem" >
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+	            <p class="navbar-text navbar-left">
+	                <span>&gt;</span>
+	                <span>{{title}}</span>
+	            </p>
+        	</div>
+	        <div id="menuItem" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+					<li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/test2"><span class="glyphicon glyphicon-list">案件概要</span></a></li>
+		            <li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/add" ><span class="glyphicon glyphicon-plus">新規</span></a></li>
+		            <li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/test3"><span class="glyphicon glyphicon-list">稼働時間入力</span></a></li>
+		            <li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/test"><span class="glyphicon glyphicon-list">問題点・課題</span></a></li>
+		          </ul>
+	        </div>
+        </div>
+    </nav>
+    <div class="main" ng-view></div>
+</body>
+</html>

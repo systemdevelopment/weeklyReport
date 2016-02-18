@@ -1,0 +1,38 @@
+<div>
+    <div ng-show="message.show">
+        <div class="alert" role="alert" ng-class="message.type">
+            <span>{{message.text}}</span>
+        </div>
+    </div>
+    <div class="alert alert-info" ng-show="items.length < 1">
+        <span>週報は登録されておりません</span>
+    </div>
+    <div class="alert alert-info" ng-show="items.length >= 1">
+        <span>現在登録されている週報です。</span>
+    </div>
+    <div class="list-group">
+        <a class="list-group-item" ng-repeat="item in items" route-href="/item/{{item.uid}}">
+            <h3 class="bg-primary">報告週の実績・行動報告</h3>
+			<table class="table table-bordered table-striped">
+			        <thead>
+			          <tr>
+			            <th>タスク名</th>
+			            <th>対応期限</th>
+			            <th>進捗率（目標）</th>
+			            <th>優先度</th>
+			            <th>懸念点など</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr>
+			            <td>{{item.title}}</td>
+			            <td>{{item.memo}}</td>
+			            <td>{{item.memo2}}</td>
+			            <td>{{item.memo3}}</td>
+			            <td>{{item.memo4}}</td>
+			          </tr>
+			       </tbody>
+			</table>
+        </a>
+    </div>
+</div>

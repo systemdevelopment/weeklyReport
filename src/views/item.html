@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <h3 class="panel-title">タスク名：{{item.title}}</h3>
+    </div>
+    <div class="panel-body">
+	     <p class="list-group-item-text" >対応期限：{{item.memo}}</p>
+	     <p class="list-group-item-text" >進捗率（目標）：{{item.memo2}}</p>
+	     <p class="list-group-item-text" >優先度：{{item.memo3}}</p>
+	     <p class="list-group-item-text" >懸念点など：{{item.memo4}}</p>
+    </div>
+    <div class="panel-footer clearfix">
+        <button class="btn btn-warning pull-right" style="margin-left: 10px;" ng-click="deleteItem()">削除する</button>
+        <button class="btn btn-success pull-right" ng-click="addItem()">編集する</button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<h3 class="bg-primary">報告週の実績・行動報告(入力欄）</h3>
+<form role="form" name="addItemForm" ng-submit="addItem()" novalidate>
+    <div ng-show="!addItemForm.$valid">
+        <div class="alert alert-warning" role="alert">必須項目を入力してください</div>
+    </div>
+
+    <div class="form-group">
+        <label>タスク名(*)</label>
+        <input type="text" class="form-control" placeholder="タスク名を入力" ng-model="item.title" required>
+    </div>
+    <div class="form-group">
+        <label>対応期限(*)</label>
+        <input type="text" class="form-control" placeholder="対応期限を入力" ng-model="item.memo" required></textarea>
+    </div>
+    <div class="form-group">
+        <label>進捗率（目標）</label>
+        <textarea class="form-control" placeholder="進捗率（目標）を入力" ng-model="item.memo2"></textarea>
+    </div>
+    <div class="form-group">
+        <label>優先度</label>
+        <input type="text" class="form-control" placeholder="優先度を入力" ng-model="item.memo3" ></textarea>
+    </div>
+    <div class="form-group">
+        <label>懸念点など(*)</label>
+        <textarea class="form-control" placeholder="懸念点などを入力" ng-model="item.memo4" ></textarea>
+    </div>
+    <button class="btn btn-primary btn-block">登録する</button>
+
+</form>
