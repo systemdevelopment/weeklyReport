@@ -1,5 +1,5 @@
 (function(module){
-    module.controller('AddController',['$scope','$routeParams','$location','Items','defaults',
+    module.controller('ReportController',['$scope','$routeParams','$location','Items','defaults',
         function($scope,$routeParams,$location,Items,defaults){
             $scope.item = angular.merge(defaults,{});
 

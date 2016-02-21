@@ -29,15 +29,23 @@
         var key = "todo-item-" + uid;
         return JSON.parse(this.storage.getItem(key));
     };
-
+    
+    p.getTestItem = function(itemName){
+		return JSON.parse(this.storage.getItem(itemName));
+	};
+	
     p.add = function(item){
-        this.lastIndex++;
+        //this.lastIndex++;
         var uid = "todo-item-" + this.lastIndex;
         this.storage.setItem(uid,JSON.stringify(item));
         this.storage.setItem("todo-index",this.lastIndex);
         return uid;
     };
-
+   
+    p.addItem = function(itemName,item){
+        this.storage.setItem(itemName,JSON.stringify(item));
+        return true;
+    };
 	p.overwrite = function(uid,item){
 		var uid = "todo-item-" + uid;
         this.storage.setItem(uid,JSON.stringify(item));

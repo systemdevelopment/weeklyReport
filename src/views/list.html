@@ -10,7 +10,7 @@
     <div class="alert alert-info" ng-show="items.length >= 1">
         <span>現在登録されている週報です。</span>
     </div>
-    <div class="list-group">
+   <!-- <div class="list-group">
         <a class="list-group-item" ng-repeat="item in items" route-href="/item/{{item.uid}}">
             <h3 class="bg-primary">報告週の実績・行動報告</h3>
 			<table class="table table-bordered table-striped">
@@ -29,10 +29,358 @@
 			            <td>{{item.memo}}</td>
 			            <td>{{item.memo2}}</td>
 			            <td>{{item.memo3}}</td>
-			            <td>{{item.memo4}}</td>
+			            <td>{{item.memo4}}{{item.memo5}}{{item.memo6}}{{item.memo7}}{{item.memo8}}{{item.memo9}}{{item.memo10}}{{item.memo11}}</td>
 			          </tr>
 			       </tbody>
 			</table>
         </a>
-    </div>
+    </div>-->
+
+
+<div >
+<h3 class="bg-primary">案件概要</h3>
+<div class="form-group">
+<div class="panel panel-primary">
+  <div class="panel-heading">プロジェクト名</div>
+  <div class="panel-body">{{ testitems2.memo8 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">作業場所</div>
+  <div class="panel-body">{{ testitems2.memo9 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">担当営業</div>
+  <div class="panel-body">{{ testitems2.memo10 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">案件概要</div>
+  <div class="panel-body">{{ testitems2.memo11 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">プロジェクト構成</div>
+  <div class="panel-body">{{ testitems2.memo12 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">環境/必要スキル</div>
+  <div class="panel-body">{{ testitems2.memo13 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">案件動向</div>
+  <div class="panel-body">{{ testitems2.memo14 }}</div>
+</div> 
+
+<div class="panel panel-primary">
+  <div class="panel-heading">顧客動向</div>
+  <div class="panel-body">{{ testitems2.memo15 }}</div>
+</div> 
+
+<h3 class="bg-primary">報告週の実績・行動報告</h3>
+<div class="table-responsive">
+<table class="table">
+        <thead>
+          <tr>
+            <th>タスク名</th>
+            <th>対応期限</th>
+            <th>進捗率（目標）</th>
+            <th>優先度</th>
+            <th>懸念点など</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>設計</td>
+            <td>12月末</td>
+            <td>10%</td>
+            <td>10%</td>
+            <td>画面設計</td>
+          </tr>
+          <tr>
+            <td>製造</td>
+            <td>1月末</td>
+            <td>0%</td>
+            <td>0%</td>
+            <td>製造</td>
+          </tr>
+          <tr>
+            <td>試験</td>
+            <td>2月末</td>
+            <td>0％</td>
+            <td>0%</td>
+            <td>試験</td>
+          </tr>
+        </tbody>
+</table>
+ </div>
+ 
+<h3 class="bg-primary">稼働報告</h3>
+<div class="table-responsive">
+<table class="table">
+        <thead>
+          <tr>
+            <th>日付</th>
+            <th>出勤(予定)</th>
+            <th>退勤(予定)</th>
+            <th>稼動(予定)</th>
+            <th>出勤(実績)</th>
+            <th>退勤(実績)</th>
+            <th>稼動(実績)</th>
+            <th>剥離</th>
+            <th>剥離理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11月23日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11月24日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11月25日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11月26日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11月27日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+          <tr class="bg-danger">
+            <td>11月28日</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+          <tr class="bg-danger">
+            <td>11月29日</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0.0</td>
+            <td></td>
+          </tr>
+                    <tr>
+            <td>11月30日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12月1日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12月2日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12月3日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12月4日</td>
+            <td>9:00</td>
+            <td>19:00</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="bg-danger">
+            <td>12月5日</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="bg-danger">
+            <td>12月6日</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td>0:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+</table> 
+</div>
+ 
+<h3 class="bg-primary">翌週の予定</h3>
+<div class="table-responsive">
+<table class="table">
+        <thead>
+          <tr>
+            <th>タスク名</th>
+            <th>対応期限</th>
+            <th>進捗率（目標）</th>
+            <th>優先度</th>
+            <th>懸念点など</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>設計</td>
+            <td>12月末</td>
+            <td>10%</td>
+            <td>10%</td>
+            <td>画面設計</td>
+          </tr>
+          <tr>
+            <td>製造</td>
+            <td>1月末</td>
+            <td>0%</td>
+            <td>0%</td>
+            <td>製造</td>
+          </tr>
+          <tr>
+            <td>試験</td>
+            <td>2月末</td>
+            <td>0％</td>
+            <td>0%</td>
+            <td>試験</td>
+          </tr>
+        </tbody>
+</table>
+</div>
+
+<h3 class="bg-primary">報告週の実績・行動報告(入力欄）</h3>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">タスク名</div>
+	  <div class="panel-body">タスク名を入力</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">対応期限</div>
+	  <div class="panel-body">対応期限を入力</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">進捗率（目標）</div>
+	  <div class="panel-body">進捗率（目標）を入力</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">優先度</div>
+	  <div class="panel-body">優先度を入力</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">懸念点など</div>
+	  <div class="panel-body">懸念点などを入力</div>
+	</div>
+<a class="list-group-item" route-href="/test/edit">	
+<h3 class="bg-primary">案件遂行に伴う問題点・課題</h3>
+<div >
+	<div class="panel panel-primary">
+	  <div class="panel-heading">品質</div>
+	  <div class="panel-body">{{ testitems.memo5 }}</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">コスト</div>
+	  <div class="panel-body">{{ testitems.memo6 }}</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">納期</div>
+	  <div class="panel-body">{{ testitems.memo7 }}</div>
+	</div>
+
+	<div class="panel panel-primary">
+	  <div class="panel-heading">その他</div>
+	  <div class="panel-body">{{ testitems.etc }}</div>
+	</div>
+</div>
+</a>
+</div>
+
+
 </div>

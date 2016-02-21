@@ -8,40 +8,51 @@
                 resolve : {
                     defaults : function(){
                         return {
-                            date : new Date()
+                            
                         }
                     }
                 },
                 reloadOnSearch: false
-            }).when('/test',{
+            }).when('/task',{
+                templateUrl : 'views/task.html',
+                controller  : 'TaskController',
+                resolve : {
+                    defaults : function(){
+                        return {
+                            //date : new Date()
+                        }
+                    }
+                },
+                reloadOnSearch: false
+            }).when('/test/edit',{	
                 templateUrl : 'views/test.html',
                 controller  : 'testController',
                 resolve : {
                     defaults : function(){
                         return {
-                            date : new Date()
+                            //date : new Date()
                         }
                     }
                 },
                 reloadOnSearch: false
-            }).when('/test2',{
-                templateUrl : 'views/test2.html',
-                controller  : 'testController2',
+            }).when('/overView',{
+                templateUrl : 'views/overView.html',
+                controller  : 'overViewController',
                 resolve : {
                     defaults : function(){
                         return {
-                            date : new Date()
+                            
                         }
                     }
                 },
                 reloadOnSearch: false
-            }).when('/test3',{
-                templateUrl : 'views/test3.html',
-                controller  : 'testController3',
+            }).when('/time',{
+                templateUrl : 'views/time.html',
+                controller  : 'TimeController',
                 resolve : {
                     defaults : function(){
                         return {
-                            date : new Date()
+                           
                         }
                     }
                 },
@@ -49,24 +60,24 @@
             }).when('/list',{
                 templateUrl : 'views/list.html',
                 controller  : 'ListController'
-            }).when('/add',{
-                templateUrl : 'views/add.html',
-                controller  : 'AddController',
+            }).when('/report',{
+                templateUrl : 'views/report.html',
+                controller  : 'ReportController',
                 resolve : {
                     defaults : function(){
                         return {
-                            date : new Date()
+                           
                         }
                     }
                 },
                 reloadOnSearch: false
-            }).when('/add/:uid',{
-                templateUrl : 'views/add.html',
-                controller  : 'AddController',
+            }).when('/report/:uid',{
+                templateUrl : 'views/report.html',
+                controller  : 'ReportController',
                 resolve : {
                     defaults : function(){
                         return {
-                            date : new Date()
+                            
                         }
                     }
                 },

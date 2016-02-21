@@ -10,9 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.5.1-dist/css/bootstrap-datepicker.min.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+	<script type="text/javascript" src="bootstrap-datepicker-1.5.1-dist/js/bootstrap-datepicker.min.js"></script>
 
     <script type="text/javascript" src="vendors/angular.js"></script>
     <script type="text/javascript" src="vendors/angular-route.js"></script>
@@ -23,12 +24,12 @@
     <script type="text/javascript" src="js/services/LocalStorageItems.js"></script>
 
     <script type="text/javascript" src="js/controllers/LoginController.js"></script>
-    <script type="text/javascript" src="js/controllers/testController.js"></script>
-    <script type="text/javascript" src="js/controllers/testController2.js"></script>
-    <script type="text/javascript" src="js/controllers/testController3.js"></script>
+    <script type="text/javascript" src="js/controllers/taskController.js"></script>
+    <script type="text/javascript" src="js/controllers/overViewController.js"></script>
+    <script type="text/javascript" src="js/controllers/timeController.js"></script>
     <script type="text/javascript" src="js/controllers/AppController.js"></script>
     <script type="text/javascript" src="js/controllers/ListController.js"></script>
-    <script type="text/javascript" src="js/controllers/AddController.js"></script>
+    <script type="text/javascript" src="js/controllers/reportController.js"></script>
     <script type="text/javascript" src="js/controllers/ItemController.js"></script>
 	
     <style>
@@ -43,12 +44,13 @@
 		    }
 		});
 	</script>
+
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-		        <span class="navbar-brand" style="font-size: 2em">週報システム</span>
+		        <a href="javascript:void 0;"  route-href="/list"><span class="navbar-brand" style="font-size: 2em">週報システム</span></a>
 		        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuItem" >
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
@@ -61,10 +63,11 @@
         	</div>
 	        <div id="menuItem" class="navbar-collapse collapse">
 		          <ul class="nav navbar-nav navbar-right">
-					<li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/test2"><span class="glyphicon glyphicon-list">案件概要</span></a></li>
-		            <li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/add" ><span class="glyphicon glyphicon-plus">新規</span></a></li>
-		            <li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/test3"><span class="glyphicon glyphicon-list">稼働時間入力</span></a></li>
-		            <li><a href="javascript:void 0;" style="font-size: 1.5em" route-href="/test"><span class="glyphicon glyphicon-list">問題点・課題</span></a></li>
+					<li><a href="javascript:void 0;"  route-href="/login" data-toggle="modal" data-target="#sampleModal"><span class="glyphicon glyphicon-triangle-right">ログイン</span></a></li>
+					<li><a href="javascript:void 0;"  route-href="/overView"><span class="glyphicon glyphicon-triangle-right">案件概要</span></a></li>
+		            <li><a href="javascript:void 0;"  route-href="/report" ><span class="glyphicon glyphicon-triangle-right">実績・行動報告</span></a></li>
+		            <li><a href="javascript:void 0;"  route-href="/time"><span class="glyphicon glyphicon-triangle-right">稼働時間入力</span></a></li>
+		            <li><a href="javascript:void 0;"  route-href="/task"><span class="glyphicon glyphicon-triangle-right">問題点・課題</span></a></li>
 		          </ul>
 	        </div>
         </div>

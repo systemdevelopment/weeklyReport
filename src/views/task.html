@@ -1,0 +1,24 @@
+<div>
+	<h3 class="bg-primary">案件遂行に伴う問題点・課題</h3>
+	<form role="form" name="addItemForm" ng-submit="addItem()" novalidate>
+		<div class="form-group">
+			<label class="control-label">品質</label>
+			<textarea class="form-control"  placeholder="品質を入力" ng-model="item.memo5" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label class="control-label">コスト</label>
+			<textarea class="form-control" placeholder="コストを入力" ng-model="item.memo6" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label class="control-label">納期</label>
+			<textarea class="form-control" placeholder="納期を入力" ng-model="item.memo7" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label class="control-label">その他</label>
+			<textarea class="form-control" placeholder="その他を入力" ng-model="item.etc" rows="2"></textarea>
+		</div>
+		<div class="form-actions">
+			<button class="btn btn-primary btn-block">登録する</button>
+		</div>
+	</form>
+</div>

@@ -1,20 +1,21 @@
 (function(module){
-    module.controller('testController2',['$scope','$routeParams','$location','Items','defaults',
+    module.controller('overViewController',['$scope','$routeParams','$location','Items','defaults',
         function($scope,$routeParams,$location,Items,defaults){
             //$scope.item = angular.merge(defaults,{});
 
             $scope.$emit('title','案件概要');
 
-           /* $scope.addItem = function(){
-            	if (uid) {
+            $scope.addItem = function(){
+            	 /* if (uid) {
             		Items.overwrite(uid,$scope.item);
                     $location.path("/list");
-            	} else if($scope.addItemForm.$valid) {
-                    Items.add($scope.item);
+            	} else*/
+                if($scope.addItemForm.$valid) {
+                    Items.addItem("testItem2",$scope.item);
                     $location.path("/list");
                 }
             };
-            
+            /*
             var uid = $routeParams['uid'];
             if (uid) {
             	$scope.item = Items.get(uid);
