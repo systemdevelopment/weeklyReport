@@ -1,75 +1,104 @@
 <!DOCTYPE html>
 <html lang="ja" ng-app="main" ng-controller="AppController">
-<head>
-    <meta charset="UTF-8">
+	<head>
+	    <meta charset="UTF-8">
 
-    <title ng-cloak>週報システム | {{title}}</title>
-	
-    <!--  共通のヘッダ -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title ng-cloak>週報システム | {{title}}</title>
+		
+	    <!--  共通のヘッダ -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.5.1-dist/css/bootstrap-datepicker.min.css">
+	    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.5.1-dist/css/bootstrap-datepicker.min.css">
 
-    <script type="text/javascript" src="jquery-2.2.0.js"></script>
+	    <script type="text/javascript" src="jquery-2.2.0.js"></script>
 
-    <script type="text/javascript" src="vendors/angular.min.js"></script>
-    <script type="text/javascript" src="vendors/angular-route.js"></script>
+	    <script type="text/javascript" src="vendors/angular.min.js"></script>
+	    <script type="text/javascript" src="vendors/angular-route.js"></script>
 
-    <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="bootstrap-datepicker-1.5.1-dist/js/bootstrap-datepicker.min.js"></script>
+	    <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bootstrap-datepicker-1.5.1-dist/js/bootstrap-datepicker.min.js"></script>
+		<script type="text/javascript" src="ui-bootstrap-tpls-1.1.2.min.js"></script>
+		
+	    <script type="text/javascript" src="js/routes.js"></script>
+	    <script type="text/javascript" src="js/app.js"></script>
 
+	    <script type="text/javascript" src="js/services/LocalStorageItems.js"></script>
 
-    <script type="text/javascript" src="js/routes.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-
-    <script type="text/javascript" src="js/services/LocalStorageItems.js"></script>
-
-    <script type="text/javascript" src="js/controllers/LoginController.js"></script>
-    <script type="text/javascript" src="js/controllers/taskController.js"></script>
-    <script type="text/javascript" src="js/controllers/overViewController.js"></script>
-    <script type="text/javascript" src="js/controllers/timeController.js"></script>
-    <script type="text/javascript" src="js/controllers/AppController.js"></script>
-    <script type="text/javascript" src="js/controllers/ListController.js"></script>
-    <script type="text/javascript" src="js/controllers/reportController.js"></script>
-    <script type="text/javascript" src="js/controllers/ItemController.js"></script>
-	
-    <style>
-        .main {
-            margin: 1em;
-        }
-    </style>
-
-
-</head>
-<body >
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-		        <a href="javascript:void 0;"  route-href="/list"><span class="navbar-brand" style="font-size: 2em">週報システム</span></a>
-		        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuItem" >
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		        </button>
-	            <p class="navbar-text navbar-left">
-	                <span>&gt;</span>
-	                <span>{{title}}</span>
-	            </p>
-        	</div>
-	        <div id="menuItem" class="navbar-collapse collapse">
-		          <ul class="nav navbar-nav navbar-right">
-					<li><a href="javascript:void 0;"  route-href="/overView"><span class="glyphicon glyphicon-triangle-right">案件概要</span></a></li>
-		            <li><a href="javascript:void 0;"  route-href="/report" ><span class="glyphicon glyphicon-triangle-right">実績・行動報告</span></a></li>
-		            <li><a href="javascript:void 0;"  route-href="/time"><span class="glyphicon glyphicon-triangle-right">稼働時間入力</span></a></li>
-		            <li><a href="javascript:void 0;"  route-href="/task"><span class="glyphicon glyphicon-triangle-right">問題点・課題</span></a></li>
-		          </ul>
+	    <script type="text/javascript" src="js/controllers/taskController.js"></script>
+	    <script type="text/javascript" src="js/controllers/overViewController.js"></script>
+	    <script type="text/javascript" src="js/controllers/timeController.js"></script>
+	    <script type="text/javascript" src="js/controllers/AppController.js"></script>
+	    <script type="text/javascript" src="js/controllers/ListController.js"></script>
+	    <script type="text/javascript" src="js/controllers/reportController.js"></script>
+	    <script type="text/javascript" src="js/controllers/ItemController.js"></script>
+		
+	    <style>
+	        .main {
+	            margin: 1em;
+	        }
+	    </style>
+	    <script>
+			$(document).on('click','.navbar-collapse.in',function(e) {
+			    if( $(e.target).is('a') ) {
+			        $(this).collapse('hide');
+			    }
+			});
+			$(document).ready(function(){
+				//指定したセレクタのモーダルを表示させる
+				$('#sampleModal').modal('show');
+	    	});
+		</script>
+	</head>
+	<body class="ng-scope">
+	    <nav class="navbar navbar-default" role="navigation">
+	        <div class="container-fluid">
+	            <div class="navbar-header">
+			        <a href="javascript:void 0;"  route-href="/list"><span class="navbar-brand" style="font-size: 2em">週報システム</span></a>
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuItem" >
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			        </button>
+		            <p class="navbar-text navbar-left">
+		                <span>&gt;</span>
+		                <span>{{title}}</span>
+		            </p>
+	        	</div>
+		        <div id="menuItem" class="navbar-collapse collapse">
+			          <ul class="nav navbar-nav navbar-right">
+						<li><a href="javascript:void 0;"  route-href="/overView"><span class="glyphicon glyphicon-triangle-right">案件概要</span></a></li>
+			            <li><a href="javascript:void 0;"  route-href="/report" ><span class="glyphicon glyphicon-triangle-right">実績・行動報告</span></a></li>
+			            <li><a href="javascript:void 0;"  route-href="/time"><span class="glyphicon glyphicon-triangle-right">稼働時間入力</span></a></li>
+			            <li><a href="javascript:void 0;"  route-href="/task"><span class="glyphicon glyphicon-triangle-right">問題点・課題</span></a></li>
+			          </ul>
+		        </div>
 	        </div>
-        </div>
-    </nav>
-    <div class="main" ng-view></div>
-    <!-- Modal for newGuestForm -->
-
-</body>
+	    </nav>
+	    <div class="main" ng-view></div>
+	    
+		<div class="modal fade" id="sampleModal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+				        <h3>ログイン</h3>
+		        	</div>
+			        <div class="modal-body">
+					    <div class="form-group">
+					        <label>ログインID(*)</label>
+					        <input type="text" class="form-control" placeholder="ログインを入力" ng-model="item.id" required>
+					    </div>
+			            <div class="form-group">
+					        <label>パスワード(*)</label>
+					        <input type="text" class="form-control" placeholder="パスワードを入力" ng-model="item.password" required></textarea>
+					    </div>
+			        </div>
+					<div class="modal-footer">
+					    <button class="btn btn-primary btn-block" route-href="/list" data-dismiss="modal">LOGIN</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
