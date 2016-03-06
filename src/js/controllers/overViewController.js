@@ -3,7 +3,7 @@
         function($scope,$routeParams,$location,Items,defaults){
             //$scope.item = angular.merge(defaults,{});
 
-            $scope.$emit('title','案件概要');
+            //$scope.$emit('title','案件概要');
 
             $scope.addItem = function(){
             	 /* if (uid) {
@@ -15,13 +15,11 @@
                     $location.path("/list");
                 }
             };
-            /*
-            var uid = $routeParams['uid'];
-            if (uid) {
-            	$scope.item = Items.get(uid);
-            	$scope.$emit('title','編集');
+            var Item = Items.getTestItem("testItem2");
+            if (Item) {
+            	$scope.item = Item;
+            	//$scope.$emit('title','編集');
 			}
-			*/
 
     }]);
 }(app.module));

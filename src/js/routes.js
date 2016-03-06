@@ -24,9 +24,9 @@
                     }
                 },
                 reloadOnSearch: false
-            }).when('/test/edit',{	
-                templateUrl : 'views/test.html',
-                controller  : 'testController',
+            }).when('/task/edit',{
+                templateUrl : 'views/task.html',
+                controller  : 'TaskController',
                 resolve : {
                     defaults : function(){
                         return {
@@ -36,6 +36,17 @@
                 },
                 reloadOnSearch: false
             }).when('/overView',{
+                templateUrl : 'views/overView.html',
+                controller  : 'overViewController',
+                resolve : {
+                    defaults : function(){
+                        return {
+                            
+                        }
+                    }
+                },
+                reloadOnSearch: false
+            }).when('/overView/edit',{
                 templateUrl : 'views/overView.html',
                 controller  : 'overViewController',
                 resolve : {

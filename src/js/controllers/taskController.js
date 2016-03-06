@@ -3,7 +3,7 @@
         function($scope,$routeParams,$location,Items,defaults){
             $scope.item = angular.merge(defaults,{});
 
-            $scope.$emit('title','問題点・課題');
+            //$scope.$emit('title','問題点・課題');
 
             $scope.addItem = function(){
             	/*if (uid) {
@@ -16,9 +16,9 @@
                 }
             };
             
-            var edit = $routeParams['edit'];
-            if (edit) {
-            	$scope.item = Items.getTestItem("testItem");
+            var Item = Items.getTestItem("testItem");
+            if (Item) {
+            	$scope.item = edit;
 			}
 			
 

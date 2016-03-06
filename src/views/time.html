@@ -1,46 +1,41 @@
-<div class="container docs-input-sizes">
-<h3 class="bg-primary">稼動報告（入力欄）</h3>
-<form role="form" name="addItemForm" ng-submit="addItem()" novalidate>
-<div class="controls control-group">
-<div class="docs-input-sizes">
+<div>
+	<h3 class="bg-primary">稼動報告（入力欄）</h3>
+	<form role="form" name="addItemForm" ng-submit="addItem()" novalidate>
 
-<div >
-    <label for="mydate">日付：</label>
-    <input type="text" class="span3" style="width:100%;" id="mydate" ng-model="item.memo16" placeholder="日付を入力" >
-</div>
-<script>
-
-$('#mydate').datepicker({
-    language: 'ja',
-    format: "yyyy/mm/dd",
-    todayBtn: "linked"
-
-});
-</script>
-   <div >
-	   <label>出勤(予定)</label>
-	   <input class="span3" style="width:100%;" placeholder="出勤(予定)を入力" ng-model="item.memo17" type="text" >
+	<div class="form-group">
+	    <label for="mydate">日付：</label>
+	    <input type="text" class="span3" style="width:100%;" id="mydate" ng-model="item.memo16" placeholder="日付を入力" >
 	</div>
-   <div >
-   		<label>退勤(予定)</label>
-     <input class="span3"  style="width:100%;" placeholder="退勤(予定）を入力 "ng-model="item.memo18" type="text" >
-   </div>
-      <div >
-   <label>出勤</label>
-   <input class="span3" style="width:100%;" placeholder="出勤を入力" ng-model="item.memo19" type="text" >
-</div>
-   <div >
-   <label>退勤</label>
-   <input class="span3" style="width:100%;" placeholder="退勤を入力" ng-model="item.memo20" type="text" >
-</div>
+	<script>
+		$('#mydate').datepicker({
+		    language: 'ja',
+		    format: "yyyy/mm/dd",
+		    todayBtn: "linked"
 
-   <div>
-   <label>乖離理由</label>
-     <textarea style="width:100%;"  placeholder="乖離理由を入力" ng-model="item.memo21" rows="2"></textarea>
-   </div>
-   <br>
-   <div class="form-actions">
-        <button class="btn btn-primary btn-block">登録する</button>
-   </div>
-</div>   
-</form>
+		});
+	</script>
+		<div class="form-group">
+		   <label>出勤(予定)</label>
+		   <input class="span3" style="width:100%;" placeholder="出勤(予定)を入力" ng-model="item.memo17" type="text" >
+		</div>
+		<div class="form-group">
+			<label>退勤(予定)</label>
+			<input class="span3"  style="width:100%;" placeholder="退勤(予定）を入力 "ng-model="item.memo18" type="text" >
+		</div>
+		<div class="form-group">
+		<label>出勤</label>
+		<input class="span3" style="width:100%;" placeholder="出勤を入力" ng-model="item.memo19" type="text" >
+		</div>
+		<div class="form-group">
+		<label>退勤</label>
+		<input class="span3" style="width:100%;" placeholder="退勤を入力" ng-model="item.memo20" type="text" >
+		</div>
+	   <div class="form-group">
+	   <label>乖離理由</label>
+	     <textarea style="width:100%;"  placeholder="乖離理由を入力" ng-model="item.memo21" rows="2"></textarea>
+	   </div>
+
+	   <div class="form-actions">
+			<button class="btn btn-primary btn-block">登録する</button>
+	   </div>  
+	</form>
