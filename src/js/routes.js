@@ -68,6 +68,17 @@
                     }
                 },
                 reloadOnSearch: false
+            }).when('/time/:uid',{
+                templateUrl : 'views/time.html',
+                controller  : 'TimeController',
+                resolve : {
+                    defaults : function(){
+                        return {
+                           
+                        }
+                    }
+                },
+                reloadOnSearch: false
             }).when('/list',{
                 templateUrl : 'views/list.html',
                 controller  : 'ListController'

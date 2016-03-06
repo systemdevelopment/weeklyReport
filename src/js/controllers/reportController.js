@@ -3,8 +3,6 @@
         function($scope,$routeParams,$location,Items,defaults){
             $scope.item = angular.merge(defaults,{});
 
-            $scope.$emit('title','追加');
-
             $scope.addItem = function(){
             	if (uid) {
             		Items.overwrite(uid,$scope.item);
@@ -18,7 +16,6 @@
             var uid = $routeParams['uid'];
             if (uid) {
             	$scope.item = Items.get(uid);
-            	$scope.$emit('title','編集');
 			}
 			
 

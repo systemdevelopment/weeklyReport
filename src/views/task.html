@@ -1,5 +1,8 @@
 <div>
 	<h3 class="bg-primary">案件遂行に伴う問題点・課題</h3>
+	<div ng-show="!addItemForm.$valid">
+    	<div class="alert alert-warning" role="alert">必須項目を入力してください</div>
+	</div>
 	<form role="form" name="addItemForm" ng-submit="addItem()" novalidate>
 		<div class="form-group">
 			<label class="control-label">品質</label>

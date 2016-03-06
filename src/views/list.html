@@ -14,7 +14,7 @@
 
 <div>
 	<div class="alert alert-info" >
-		<span>現在登録されている週報です。</span>
+		<span><strong>info:</strong>現在登録されている週報です。</span>
 	</div>
    <!-- <div class="list-group">
 		<a class="list-group-item" ng-repeat="item in items" route-href="/item/{{item.uid}}">
@@ -50,51 +50,49 @@
 				</h3>
 			</div>
 		
-			<div id="collapse1" class="panel-collapse collapse	">
+			<div id="collapse1" class="panel-collapse collapse" route-href="/overView/edit">
 				<div class="panel-body">
-					<a class="list-group-item" route-href="/overView/edit">	
-						<div class="form-group">
-							<div class="panel panel-primary">
-							  <div class="panel-heading">プロジェクト名</div>
-							  <div class="panel-body">{{ testitems2.memo8 }}</div>
-							</div> 
+					<div class="form-group">
+						<div class="panel panel-primary">
+						  <div class="panel-heading">プロジェクト名</div>
+						  <div class="panel-body">{{ testitems2.memo8 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">作業場所</div>
-							  <div class="panel-body">{{ testitems2.memo9 }}</div>
-							</div> 
+						<div class="panel panel-primary">
+						  <div class="panel-heading">作業場所</div>
+						  <div class="panel-body">{{ testitems2.memo9 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">担当営業</div>
-							  <div class="panel-body">{{ testitems2.memo10 }}</div>
-							</div> 
+						<div class="panel panel-primary">
+						  <div class="panel-heading">担当営業</div>
+						  <div class="panel-body">{{ testitems2.memo10 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">案件概要</div>
-							  <div class="panel-body">{{ testitems2.memo11 }}</div>
-							</div> 
+						<div class="panel panel-primary">
+						  <div class="panel-heading">案件概要</div>
+						  <div class="panel-body">{{ testitems2.memo11 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">プロジェクト構成</div>
-							  <div class="panel-body">{{ testitems2.memo12 }}</div>
-							</div> 
+						<div class="panel panel-primary">
+						  <div class="panel-heading">プロジェクト構成</div>
+						  <div class="panel-body">{{ testitems2.memo12 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">環境/必要スキル</div>
-							  <div class="panel-body">{{ testitems2.memo13 }}</div>
-							</div> 
+						<div class="panel panel-primary">
+						  <div class="panel-heading">環境/必要スキル</div>
+						  <div class="panel-body">{{ testitems2.memo13 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">案件動向</div>
-							  <div class="panel-body">{{ testitems2.memo14 }}</div>
-							</div> 
+						<div class="panel panel-primary">
+						  <div class="panel-heading">案件動向</div>
+						  <div class="panel-body">{{ testitems2.memo14 }}</div>
+						</div> 
 
-							<div class="panel panel-primary">
-							  <div class="panel-heading">顧客動向</div>
-							  <div class="panel-body">{{ testitems2.memo15 }}</div>
-							</div> 
-						</div>
-					</a>
+						<div class="panel panel-primary">
+						  <div class="panel-heading">顧客動向</div>
+						  <div class="panel-body">{{ testitems2.memo15 }}</div>
+						</div> 
+					</div>
 				</div>
 			</div>
 		</div>
@@ -103,7 +101,7 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading pointer" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
 				<h3 class="panel-title">
-					<span >報告週の実績・行動報告<span>
+					<span>稼働報告<span>
 					<span class="glyphicon glyphicon-collapse-down pull-right"></span>
 				</h3>
 			</div>
@@ -125,160 +123,18 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>11月23日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
+								<tr ng-repeat="item in items2" route-href="/time/{{item.uid}}">
+									<td>{{item.memo16}}</td>
+									<td>{{item.memo17}}</td>
+									<td>{{item.memo18}}</td>
+									<td>7:50</td>
+									<td>{{item.memo19}}</td>
+									<td>{{item.memo20}}</td>
+									<td>7:50</td>
 									<td>0.0</td>
-									<td></td>
+									<td>{{item.memo21}}</td>
 								</tr>
-								<tr>
-									<td>11月24日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>0.0</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>11月25日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>0.0</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>11月26日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>0.0</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>11月27日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td>0.0</td>
-									<td></td>
-								</tr>
-								<tr class="bg-danger">
-									<td>11月28日</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0.0</td>
-									<td></td>
-								</tr>
-								<tr class="bg-danger">
-									<td>11月29日</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0.0</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>11月30日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>12月1日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>12月2日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>12月3日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>12月4日</td>
-									<td>9:00</td>
-									<td>19:00</td>
-									<td>10:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr class="bg-danger">
-									<td>12月5日</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr class="bg-danger">
-									<td>12月6日</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td>0:00</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
+							</tbody>
 						</table> 
 					</div>
 				</div>
@@ -289,7 +145,7 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading pointer" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
 				<h3 class="panel-title">
-					<span >翌週の予定<span>
+					<span >報告週の実績・行動報告/翌週の予定<span>
 					<span class="glyphicon glyphicon-collapse-down pull-right"></span>
 				</h3>
 			</div> 
@@ -302,31 +158,17 @@
 									<th>タスク名</th>
 									<th>対応期限</th>
 									<th>進捗率（目標）</th>
-									<th>優先度</th>
+									<th>進捗率（実績）</th>
 									<th>懸念点など</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>設計</td>
-									<td>12月末</td>
-									<td>10%</td>
-									<td>10%</td>
-									<td>画面設計</td>
-								</tr>
-								<tr>
-									<td>製造</td>
-									<td>1月末</td>
-									<td>0%</td>
-									<td>0%</td>
-									<td>製造</td>
-								</tr>
-								<tr>
-									<td>試験</td>
-									<td>2月末</td>
-									<td>0％</td>
-									<td>0%</td>
-									<td>試験</td>
+								<tr ng-repeat="item in items" route-href="/report/{{item.uid}}">
+									<td>{{item.title}}</td>
+									<td>{{item.memo}}</td>
+									<td>{{item.memo2}}</td>
+									<td>{{item.memo3}}</td>
+									<td>{{item.memo4}}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -347,21 +189,21 @@
 									<td>設計</td>
 									<td>12月末</td>
 									<td>10%</td>
-									<td>10%</td>
+									<td>高</td>
 									<td>画面設計</td>
 								</tr>
 								<tr>
 									<td>製造</td>
 									<td>1月末</td>
 									<td>0%</td>
-									<td>0%</td>
+									<td>中</td>
 									<td>製造</td>
 								</tr>
 								<tr>
 									<td>試験</td>
 									<td>2月末</td>
 									<td>0％</td>
-									<td>0%</td>
+									<td>高</td>
 									<td>試験</td>
 								</tr>
 							</tbody>

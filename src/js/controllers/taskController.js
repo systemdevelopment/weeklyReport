@@ -11,15 +11,15 @@
                     $location.path("/list");
             	} else*/
             	if($scope.addItemForm.$valid) {
-                    Items.addItem("testItem",$scope.item);
+                    Items.addItem($scope.item);
                     $location.path("/list");
                 }
             };
             
-            var Item = Items.getTestItem("testItem");
+            /*var Item = Items.getTestItem("testItem");
             if (Item) {
             	$scope.item = edit;
-			}
+			}*/
 			
 
     }]);
