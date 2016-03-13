@@ -2,18 +2,7 @@
     var routes = angular.module("main.routes",["ngRoute"])
         .config(function($routeProvider, $locationProvider){
 
-            $routeProvider.when('/login',{
-                templateUrl : 'views/login.html',
-                controller  : 'LoginController',
-                resolve : {
-                    defaults : function(){
-                        return {
-                            
-                        }
-                    }
-                },
-                reloadOnSearch: false
-            }).when('/task',{
+            $routeProvider.when('/task',{
                 templateUrl : 'views/task.html',
                 controller  : 'TaskController',
                 resolve : {
@@ -104,11 +93,6 @@
                     }
                 },
                 reloadOnSearch: false
-            }).when('/item/:uid',{
-                templateUrl : 'views/item.html',
-                controller  : 'ItemController'
-            }).otherwise({
-                redirectTo: '/list'
             });
         });
 

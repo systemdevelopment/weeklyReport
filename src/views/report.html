@@ -6,23 +6,23 @@
 
     <div class="form-group">
         <label>タスク名(*)</label>
-        <input type="text" class="form-control" placeholder="タスク名を入力" ng-model="item.title" required>
+        <input type="text" class="form-control" placeholder="タスク名を入力" ng-model="item.task" required>
     </div>
     <div class="form-group">
         <label>対応期限(*)</label>
-        <input type="text" class="form-control" placeholder="対応期限を入力" ng-model="item.memo" required></textarea>
+        <input type="text" class="form-control" placeholder="対応期限を入力" ng-model="item.correspondingPeriod" required></textarea>
     </div>
     <div class="form-group">
         <label>進捗率（目標）</label>
-        <input class="form-control" placeholder="進捗率（目標）を入力" ng-model="item.memo2">
+        <input class="form-control" placeholder="進捗率（目標）を入力" ng-model="item.progressRate">
     </div>
     <div class="form-group">
         <label>優先度</label>
-        <input type="text" class="form-control" placeholder="優先度を入力" ng-model="item.memo3" ></textarea>
+        <input type="text" class="form-control" placeholder="優先度を入力" ng-model="item.priority" ></textarea>
     </div>
     <div class="form-group">
         <label>懸念点など</label>
-        <textarea class="form-control" placeholder="懸念点などを入力" ng-model="item.memo4" ></textarea>
+        <textarea class="form-control" placeholder="懸念点などを入力" ng-model="item.concern" ></textarea>
     </div>
     <button class="btn btn-primary btn-block">登録する</button>
 

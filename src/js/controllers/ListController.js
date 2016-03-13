@@ -1,11 +1,10 @@
 (function(module){
     module.controller('ListController',['$scope','Items',function($scope,Items){
-        $scope.$emit('title','一覧');
 
         $scope.items = Items.list();
-        $scope.testitems2 = Items.getTestItem("testItem2");
+        $scope.overView = Items.getItemName("overView");
         $scope.items2 = Items.list2();
-        $scope.testitems = Items.getTestItem("testItem");
+        $scope.task = Items.getItemName("task");
     }]);
 }(app.module));
 

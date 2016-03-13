@@ -1,9 +1,7 @@
 (function(module){
     module.controller('TimeController',['$scope','$routeParams','$location','Items','defaults',
         function($scope,$routeParams,$location,Items,defaults){
-            //$scope.item = angular.merge(defaults,{});
-
-           //$scope.$emit('title','稼働時間入力');
+           $scope.item = angular.merge(defaults,{});
 
            $scope.addItem = function(){
             	if (uid) {

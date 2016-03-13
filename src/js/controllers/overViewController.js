@@ -1,24 +1,18 @@
 (function(module){
     module.controller('overViewController',['$scope','$routeParams','$location','Items','defaults',
         function($scope,$routeParams,$location,Items,defaults){
-            //$scope.item = angular.merge(defaults,{});
-
-            //$scope.$emit('title','案件概要');
+            $scope.overView = angular.merge(defaults,{});
 
             $scope.addItem = function(){
-            	 /* if (uid) {
-            		Items.overwrite(uid,$scope.item);
-                    $location.path("/list");
-            	} else*/
+
                 if($scope.addItemForm.$valid) {
-                    Items.addItem("testItem2",$scope.item);
+                    Items.addItem("overView",$scope.overView);
                     $location.path("/list");
                 }
             };
-            var Item = Items.getTestItem("testItem2");
+            var Item = Items.getItemName("overView");
             if (Item) {
-            	$scope.item = Item;
-            	//$scope.$emit('title','編集');
+            	$scope.overView = Item;
 			}
 
     }]);

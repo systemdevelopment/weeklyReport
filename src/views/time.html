@@ -8,7 +8,7 @@
 
 	<div class="form-group">
 	    <label for="mydate">日付：</label>
-	    <input type="text" class="span3" style="width:100%;" id="mydate" ng-model="item.memo16" placeholder="日付を入力" >
+	    <input type="text" class="span3" style="width:100%;" id="mydate" ng-model="item.date" placeholder="日付を入力" >
 	</div>
 	<script>
 		$('#mydate').datepicker({
@@ -20,23 +20,23 @@
 	</script>
 		<div class="form-group">
 		   <label>出勤(予定)</label>
-		   <input type="time" class="span3" style="width:100%;" placeholder="出勤(予定)を入力" ng-model="item.memo17" step="600" required time-model >
+		   <input type="text" class="span3" style="width:100%;" placeholder="出勤(予定)を入力" ng-model="item.arrivedWorkPlan" step="600" required >
 		</div>
 		<div class="form-group">
 			<label>退勤(予定)</label>
-			<input type="time" class="span3"  style="width:100%;" placeholder="退勤(予定）を入力 "ng-model="item.memo18" step="600" required time-model >
+			<input type="text" class="span3"  style="width:100%;" placeholder="退勤(予定）を入力 "ng-model="item.leftWorkPlan" step="600" required >
 		</div>
 		<div class="form-group">
 		<label>出勤</label>
-		<input type="time" class="span3" style="width:100%;" placeholder="出勤を入力" ng-model="item.memo19" step="600" time-model >
+		<input type="text" class="span3" style="width:100%;" placeholder="出勤を入力" ng-model="item.arrivedWork" step="600" >
 		</div>
 		<div class="form-group">
 		<label>退勤</label>
-		<input type="time" class="span3" style="width:100%;" placeholder="退勤を入力" ng-model="item.memo20" step="600" time-model >
+		<input type="text" class="span3" style="width:100%;" placeholder="退勤を入力" ng-model="item.leftWork" step="600" >
 		</div>
 	   <div class="form-group">
 	   <label>乖離理由</label>
-	     <textarea style="width:100%;"  placeholder="乖離理由を入力" ng-model="item.memo21" rows="2"></textarea>
+	     <textarea style="width:100%;"  placeholder="乖離理由を入力" ng-model="item.etc" rows="2"></textarea>
 	   </div>
 
 	   <div class="form-actions">

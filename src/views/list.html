@@ -16,31 +16,7 @@
 	<div class="alert alert-info" >
 		<span><strong>info:</strong>現在登録されている週報です。</span>
 	</div>
-   <!-- <div class="list-group">
-		<a class="list-group-item" ng-repeat="item in items" route-href="/item/{{item.uid}}">
-			<h3 class="bg-primary">報告週の実績・行動報告</h3>
-			<table class="table table-bordered table-striped">
-					<thead>
-					  <tr>
-						<th>タスク名</th>
-						<th>対応期限</th>
-						<th>進捗率（目標）</th>
-						<th>優先度</th>
-						<th>懸念点など</th>
-					  </tr>
-					</thead>
-					<tbody>
-					  <tr>
-						<td>{{item.title}}</td>
-						<td>{{item.memo}}</td>
-						<td>{{item.memo2}}</td>
-						<td>{{item.memo3}}</td>
-						<td>{{item.memo4}}{{item.memo5}}{{item.memo6}}{{item.memo7}}{{item.memo8}}{{item.memo9}}{{item.memo10}}{{item.memo11}}</td>
-					  </tr>
-				   </tbody>
-			</table>
-		</a>
-	</div>-->
+
 	<div class="panel-group" id="accordion" >
 		<div class="panel panel-primary">
 			<div class="panel-heading pointer" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
@@ -55,42 +31,42 @@
 					<div class="form-group">
 						<div class="panel panel-primary">
 						  <div class="panel-heading">プロジェクト名</div>
-						  <div class="panel-body">{{ testitems2.memo8 }}</div>
+						  <div class="panel-body">{{ overView.projectName }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">作業場所</div>
-						  <div class="panel-body">{{ testitems2.memo9 }}</div>
+						  <div class="panel-body">{{ overView.place }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">担当営業</div>
-						  <div class="panel-body">{{ testitems2.memo10 }}</div>
+						  <div class="panel-body">{{ overView.sales }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">案件概要</div>
-						  <div class="panel-body">{{ testitems2.memo11 }}</div>
+						  <div class="panel-body">{{ overView.overview }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">プロジェクト構成</div>
-						  <div class="panel-body">{{ testitems2.memo12 }}</div>
+						  <div class="panel-body">{{ overView.constitution }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">環境/必要スキル</div>
-						  <div class="panel-body">{{ testitems2.memo13 }}</div>
+						  <div class="panel-body">{{ overView.skill }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">案件動向</div>
-						  <div class="panel-body">{{ testitems2.memo14 }}</div>
+						  <div class="panel-body">{{ overView.projectsTrends }}</div>
 						</div> 
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">顧客動向</div>
-						  <div class="panel-body">{{ testitems2.memo15 }}</div>
+						  <div class="panel-body">{{ overView.customerTrends }}</div>
 						</div> 
 					</div>
 				</div>
@@ -105,7 +81,7 @@
 					<span class="glyphicon glyphicon-collapse-down pull-right"></span>
 				</h3>
 			</div>
-			<div id="collapse2" class="panel-collapse collapse	">
+			<div id="collapse2" class="panel-collapse collapse">
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table">
@@ -124,15 +100,15 @@
 							</thead>
 							<tbody>
 								<tr ng-repeat="item in items2" route-href="/time/{{item.uid}}">
-									<td>{{item.memo16}}</td>
-									<td>{{item.memo17}}</td>
-									<td>{{item.memo18}}</td>
+									<td>{{item.date}}</td>
+									<td>{{item.arrivedWorkPlan}}</td>
+									<td>{{item.leftWorkPlan}}</td>
 									<td>7:50</td>
-									<td>{{item.memo19}}</td>
-									<td>{{item.memo20}}</td>
+									<td>{{item.arrivedWork}}</td>
+									<td>{{item.leftWork}}</td>
 									<td>7:50</td>
 									<td>0.0</td>
-									<td>{{item.memo21}}</td>
+									<td>{{item.etc}}</td>
 								</tr>
 							</tbody>
 						</table> 
@@ -149,7 +125,7 @@
 					<span class="glyphicon glyphicon-collapse-down pull-right"></span>
 				</h3>
 			</div> 
-			<div id="collapse3" class="panel-collapse collapse	">
+			<div id="collapse3" class="panel-collapse collapse">
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table">
@@ -164,11 +140,11 @@
 							</thead>
 							<tbody>
 								<tr ng-repeat="item in items" route-href="/report/{{item.uid}}">
-									<td>{{item.title}}</td>
-									<td>{{item.memo}}</td>
-									<td>{{item.memo2}}</td>
-									<td>{{item.memo3}}</td>
-									<td>{{item.memo4}}</td>
+									<td>{{item.task}}</td>
+									<td>{{item.correspondingPeriod}}</td>
+									<td>{{item.progressRate}}</td>
+									<td>{{item.priority}}</td>
+									<td>{{item.concern}}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -226,22 +202,22 @@
 					<a class="list-group-item" route-href="/task/edit">	
 						<div class="panel panel-primary">
 						  <div class="panel-heading">品質</div>
-						  <div class="panel-body">{{ testitems.memo5 }}</div>
+						  <div class="panel-body">{{ task.quality }}</div>
 						</div>
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">コスト</div>
-						  <div class="panel-body">{{ testitems.memo6 }}</div>
+						  <div class="panel-body">{{ task.cost }}</div>
 						</div>
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">納期</div>
-						  <div class="panel-body">{{ testitems.memo7 }}</div>
+						  <div class="panel-body">{{ task.deliveryDate }}</div>
 						</div>
 
 						<div class="panel panel-primary">
 						  <div class="panel-heading">その他</div>
-						  <div class="panel-body">{{ testitems.etc }}</div>
+						  <div class="panel-body">{{ task.etc }}</div>
 						</div>
 					</a>
 				</div>

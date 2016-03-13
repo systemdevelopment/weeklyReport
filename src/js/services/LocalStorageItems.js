@@ -53,7 +53,7 @@
         return JSON.parse(this.storage.getItem(key));
     };
     
-    p.getTestItem = function(itemName){
+    p.getItemName = function(itemName){
 		return JSON.parse(this.storage.getItem(itemName));
 	};
 	
