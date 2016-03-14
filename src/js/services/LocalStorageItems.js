@@ -6,12 +6,12 @@
 
     p.init = function(){
         this.storage = window.localStorage;
-        this.lastIndex = this.storage.getItem("todo-index");
+        this.lastIndex = this.storage.getItem("time-index");
         if(!this.lastIndex){
             this.lastIndex = 0;
         }
 
-        this.lastIndex2 = this.storage.getItem("todo-index2");
+        this.lastIndex2 = this.storage.getItem("report-index");
         if(!this.lastIndex2){
             this.lastIndex2 = 0;
         }
@@ -20,7 +20,7 @@
     p.list = function(){
         var list = [];
         for (var uid in this.storage){
-            if(uid.indexOf("todo-item-") == 0){
+            if(uid.indexOf("time-item-") == 0){
                 var _uid = uid.substr(10);
                 var data = JSON.parse(this.storage.getItem(uid));
                 data.uid = _uid;
@@ -33,8 +33,8 @@
     p.list2 = function(){
         var list = [];
         for (var uid in this.storage){
-            if(uid.indexOf("todo2-item-") == 0){
-                var _uid = uid.substr(11);
+            if(uid.indexOf("report-item-") == 0){
+                var _uid = uid.substr(12);
                 var data = JSON.parse(this.storage.getItem(uid));
                 data.uid = _uid;
                 list.push(data);
@@ -44,12 +44,12 @@
     };
 
     p.get = function(uid){
-        var key = "todo-item-" + uid;
+        var key = "time-item-" + uid;
         return JSON.parse(this.storage.getItem(key));
     };
 
     p.get2 = function(uid){
-        var key = "todo2-item-" + uid;
+        var key = "report-item-" + uid;
         return JSON.parse(this.storage.getItem(key));
     };
     
@@ -59,17 +59,17 @@
 	
     p.add = function(item){
         this.lastIndex++;
-        var uid = "todo-item-" + this.lastIndex;
+        var uid = "time-item-" + this.lastIndex;
         this.storage.setItem(uid,JSON.stringify(item));
-        this.storage.setItem("todo-index",this.lastIndex);
+        this.storage.setItem("time-index",this.lastIndex);
         return uid;
     };
 
     p.add2 = function(item){
         this.lastIndex2++;
-        var uid = "todo2-item-" + this.lastIndex2;
+        var uid = "report-item-" + this.lastIndex2;
         this.storage.setItem(uid,JSON.stringify(item));
-        this.storage.setItem("todo2-index",this.lastIndex2);
+        this.storage.setItem("report-index",this.lastIndex2);
         return uid;
     };
    
@@ -79,23 +79,16 @@
     };
 
 	p.overwrite = function(uid,item){
-		var uid = "todo-item-" + uid;
+		var uid = "time-item-" + uid;
         this.storage.setItem(uid,JSON.stringify(item));
         return uid;
 	};
 
 	p.overwrite2 = function(uid,item){
-		var uid = "todo2-item-" + uid;
+		var uid = "report-item-" + uid;
         this.storage.setItem(uid,JSON.stringify(item));
         return uid;
 	};
-
-    p.delete = function(uid){
-        var _uid = "todo-item-" + uid;
-        this.storage.removeItem(_uid);
-
-        return true;
-    };
 
     app.LocalStorageItems = LocalStorageItems;
 }(app));

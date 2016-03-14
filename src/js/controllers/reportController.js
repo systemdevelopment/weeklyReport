@@ -5,17 +5,17 @@
 
             $scope.addItem = function(){
             	if (uid) {
-            		Items.overwrite(uid,$scope.item);
+            		Items.overwrite2(uid,$scope.item);
                     $location.path("/list");
             	} else if($scope.addItemForm.$valid) {
-                    Items.add($scope.item);
+                    Items.add2($scope.item);
                     $location.path("/list");
                 }
             };
             
             var uid = $routeParams['uid'];
             if (uid) {
-            	$scope.item = Items.get(uid);
+            	$scope.item = Items.get2(uid);
 			}
 			
 

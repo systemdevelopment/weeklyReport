@@ -8,14 +8,14 @@
             		Items.overwrite(uid,$scope.item);
                     $location.path("/list");
             	} else if($scope.addItemForm.$valid) {
-                    Items.add2($scope.item);
+                    Items.add($scope.item);
                     $location.path("/list");
                 }
             };
             
             var uid = $routeParams['uid'];
             if (uid) {
-            	$scope.item = Items.get2(uid);
+            	$scope.item = Items.get(uid);
 			}
     }]);
     

@@ -99,7 +99,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr ng-repeat="item in items2" route-href="/time/{{item.uid}}">
+								<tr ng-repeat="item in items" route-href="/time/{{item.uid}}">
 									<td>{{item.date}}</td>
 									<td>{{item.arrivedWorkPlan}}</td>
 									<td>{{item.leftWorkPlan}}</td>
@@ -139,7 +139,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr ng-repeat="item in items" route-href="/report/{{item.uid}}">
+								<tr ng-repeat="item in items2" route-href="/report/{{item.uid}}">
 									<td>{{item.task}}</td>
 									<td>{{item.correspondingPeriod}}</td>
 									<td>{{item.progressRate}}</td>
