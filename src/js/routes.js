@@ -93,6 +93,8 @@
                     }
                 },
                 reloadOnSearch: false
+            }).otherwise({
+                redirectTo: '/list'
             });
         });
 
